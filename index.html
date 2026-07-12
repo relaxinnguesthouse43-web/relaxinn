@@ -1,58 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relax Inn Guest House | Premium Stay & Online Booking Lahore</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://i.postimg.cc/8cFm8Rpg/Whats-App-Image-2026-07-11-at-3-51-34-PM-(1).jpg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://i.postimg.cc/7L47jq20/Whats-App-Image-2026-07-12-at-10-37-55-AM.jpg');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased font-semibold">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
 
-    <header class="bg-white text-slate-900 sticky top-0 z-50 shadow-md border-b border-slate-200">
+    <header class="bg-slate-900 text-white sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg border-b border-slate-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-2">
-                <i class="fa-solid fa-hotel text-amber-600 text-2xl"></i>
-                <span class="text-2xl font-extrabold tracking-tight text-slate-900">RELAX INN<span class="text-amber-600">.COM</span></span>
+                <i class="fa-solid fa-hotel text-amber-500 text-2xl"></i>
+                <span class="text-2xl font-extrabold tracking-tight">RELAX INN<span class="text-amber-500">.COM</span></span>
             </a>
-            <nav class="hidden lg:flex space-x-8 font-bold text-sm uppercase tracking-wider text-slate-900">
-                <a href="#home" class="hover:text-amber-600 transition duration-300">Home</a>
-                <a href="#rooms" class="hover:text-amber-600 transition duration-300">Rooms</a>
-                <a href="#gallery" class="hover:text-amber-600 transition duration-300">Gallery</a>
-                <a href="#facilities" class="hover:text-amber-600 transition duration-300">Amenities</a>
-                <a href="#booking" class="hover:text-amber-600 transition duration-300">Reservation</a>
-                <a href="#contact" class="hover:text-amber-600 transition duration-300">Location</a>
+            <nav class="hidden lg:flex space-x-8 font-semibold text-sm uppercase tracking-wider text-slate-300">
+                <a href="#home" class="hover:text-amber-500 transition duration-300">Home</a>
+                <a href="#rooms" class="hover:text-amber-500 transition duration-300">Rooms</a>
+                <a href="#gallery" class="hover:text-amber-500 transition duration-300">Gallery</a>
+                <a href="#facilities" class="hover:text-amber-500 transition duration-300">Amenities</a>
+                <a href="#booking" class="hover:text-amber-500 transition duration-300">Online Reservation</a>
+                <a href="#contact" class="hover:text-amber-500 transition duration-300">Location</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="tel:03124343223" class="text-sm font-extrabold text-amber-600">
+                <a href="tel:03124343223" class="hidden sm:inline-flex items-center text-sm font-bold text-amber-500 hover:text-amber-400">
                     <i class="fa-solid fa-phone mr-2"></i> 0312-4343223
                 </a>
-                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold px-5 py-2.5 rounded-lg text-sm uppercase tracking-wider shadow-md">Book Now</a>
+                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold px-5 py-2.5 rounded-lg transition duration-300 transform hover:-translate-y-0.5 shadow-md text-sm uppercase tracking-wider">Book Now</a>
             </div>
         </div>
     </header>
 
-    <section id="home" class="hero-bg text-white py-32 text-center flex items-center justify-center">
+    <section id="home" class="hero-bg text-white py-32 md:py-40 text-center flex items-center justify-center">
         <div class="container mx-auto px-4 max-w-4xl">
-            <span class="text-amber-400 font-bold uppercase tracking-widest text-sm bg-amber-500/20 px-4 py-1.5 rounded-full border border-amber-500/30">Premium Guest House</span>
+            <span class="text-amber-500 font-bold uppercase tracking-widest text-sm bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">Premium Guest House</span>
             <h2 class="text-4xl md:text-6xl font-extrabold mt-6 mb-6 leading-tight">Your Gateway to Luxury & Comfort in Lahore</h2>
-            <p class="text-lg md:text-xl text-slate-200 font-medium max-w-2xl mx-auto mb-10 leading-relaxed">Experience uncompromised security, robust power backup, and modern living spaces tailored perfectly for families and corporate clients.</p>
+            <p class="text-lg md:text-xl text-slate-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">Experience uncompromised security, robust power backup, and modern living spaces tailored perfectly for families and corporate clients.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-4 rounded-xl shadow-xl">Reserve Online</a>
-                <a href="#rooms" class="w-full sm:w-auto border border-slate-300 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl">Explore Accommodations</a>
+                <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl">Reserve Online</a>
+                <a href="#rooms" class="w-full sm:w-auto border border-slate-400 hover:border-white hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 backdrop-blur-sm">Explore Accommodations</a>
             </div>
         </div>
     </section>
 
-    <section id="rooms" class="py-24 container mx-auto px-4 max-w-5xl">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-extrabold
+    <section id="rooms" class="py-24 container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h3 class="text-xs font-bold tracking-widest text-amber-600 uppercase mb-3">Accommodations</h3>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950">Our Premium Rooms & Rates</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 group transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-72 overflow-hidden bg-slate-900">
+                    <img src="https://i.postimg.cc/7PzHJ0c0/Whats-App-Image-2026-07-12-at-9-46-23-AM.jpg" alt="Executive AC Room Luxury Double Bed" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                    <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-amber-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-snowflake mr-1"></i> Full AC | Luxury Double Bed</span>
+                </div>
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold text-slate-950 mb-3">Executive AC Room</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Fully tailored premium experience with a spacious double bed, responsive climate control, high-grade linen, and dedicated dynamic spaces.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <div>
+                            <span class="block text-2xl font-extrabold text-slate-950">PKR 6,000</span>
+                            <span class="text-xs text-slate-400 font-medium">Per 24 Hour Cycle</span>
+                        </div>
+                        <a href="#booking" onclick="selectRoom('ac')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-xl transition duration-300 text-sm">Select Room</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 group transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-72 overflow-hidden bg-slate-900">
+                    <img src="https://i.postimg.cc/Y9b11Tjx/Whats-App-Image-2026-07-12-at-9-43-23-AM.jpg" alt="Standard Non-AC Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                    <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-leaf mr-1"></i> Eco Ventilated | Single Beds</span>
+                </div>
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold text-slate-950 mb-3">Standard Non-AC Room</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Perfect budget friendly layout offering comfortable single bedding, great spatial dynamics, structural air-flow, and premium hospitality value without AC.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                        <div>
+                            <span class="block text-2xl font-extrabold text-slate-950">PKR 4,000</span>
+                            <span class="text-xs text-slate-400 font-medium">Per 24 Hour Cycle</span>
+                        </div>
+                        <a href="#booking" onclick="selectRoom('non-ac')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-xl transition duration-300 text-sm">Select Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-slate-100 border-t border-b border-slate-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h3 class="text-xs font-bold tracking-widest text-amber-600 uppercase mb-3">Our Property</h3>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950">Guest House Gallery</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden h-64 group border border-slate-200">
+                    <img src="https://i.postimg.cc/hGJWWqRX/Whats-App-Image-2026-07-12-at-9-43-24-AM.jpg" alt="Relax Inn Interior Area" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden h-64 group border border-slate-200">
+                    <img src="https://i.postimg.cc/cCBPMxfH/Whats-App-Image-2026-07-12-at-9-43-23-AM-1.jpg" alt="Relax Inn Room Setup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden h-64 group border border-slate-200">
+                    <img src="https://i.postimg.cc/63vXRxH8/Whats-App-Image-2026-07-12-at-9-43-24-AM-1.jpg" alt="Relax Inn Guest Area" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="bg-slate-900 text-white py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h3 class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-3">Services</h3>
+                <h2 class="text-3xl md:text-4xl font-extrabold">World-Class Utilities</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-wifi"></i></div>
+                    <h4 class="text-xl font-bold mb-2">High-Speed WiFi</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Uncapped gigabit fiber-optic connection seamless across all floors.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-snowflake"></i></div>
+                    <h4 class="text-xl font-bold mb-2">Climate Control</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Premium localized air-conditioning processing extreme heat loads smoothly.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 class="text-xl font-bold mb-2">24/7 Shield Security</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Advanced active perimeter patrols, entry logging, and robust CCTV surveillance arrays.</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-bolt"></i></div>
+                    <h4 class="text-xl font-bold mb-2">Dual Power Backup</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Smart instant automatic failover generation systems providing zero downtime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 container mx-auto px-4 max-w-3xl">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-100 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-amber-500 to-indigo-600"></div>
+            
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-extrabold text-slate-950 mb-3">Secure Online Reservation</h3>
+                <p class="text-slate-500">Global encrypted real-time system with instant notification protocols.</p>
+            </div>
+            
+            <div id="successMessage" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 p-6 mb-8 rounded-2xl shadow-sm flex items-start space-x-4 transition-all duration-300" role="alert">
+                <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white text-lg shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></div>
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-950 mb-1">Congratulations 🎉 Your room is booked!</h4>
+                    <p class="text-sm text-emerald-700 leading-relaxed">Thank you for reserving your room at Relax Inn. We are redirecting you to confirm your booking instantly via WhatsApp...</p>
+                </div>
+            </div>
+            
+            <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Full Name</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-4 top-3.5 text-slate-400"></i>
+                            <input type="text" id="custName" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition" placeholder="John Doe">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Mobile Number</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-phone absolute left-4 top-3.5 text-slate-400"></i>
+                            <input type="tel" id="custPhone" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition" placeholder="0312-4343223">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Check-in Date</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-calendar-check absolute left-4 top-3.5 text-slate-400"></i>
+                            <input type="date" id="checkIn" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Check-out Date</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-calendar-xmark absolute left-4 top-3.5 text-slate-400"></i>
+                            <input type="date" id="checkOut" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Room Arrangement Category</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-bed absolute left-4 top-3.5 text-slate-400"></i>
+                        <select id="roomType" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 transition appearance-none">
+                            <option value="Executive AC Room (Rs. 6,000)">Executive AC Room (PKR 6,000 / 24 Hours)</option>
+                            <option value="Standard Non-AC Room (Rs. 4,000)">Standard Non-AC Room (PKR 4,000 / 24 Hours)</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-400 pointer-events-none"></i>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">National Identity Number (CNIC)</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-id-card absolute left-4 top-3.5 text-slate-400"></i>
+                        <input type="text" id="custCnic" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition" placeholder="35201-XXXXXXX-X">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">CNIC Document Scan / Real-Time Live Capture</label>
+                    <div class="border-2 border-dashed border-slate-200 hover:border-slate-900 rounded-2xl p-6 transition text-center bg-slate-50 relative group">
+                        <input type="file" accept="image/*" id="cnicUpload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                        <div class="space-y-2" id="uploadPrompt">
+                            <div class="text-3xl text-slate-400 group-hover:text-slate-900 transition duration-300"><i class="fa-solid fa-camera-retro"></i></div>
+                            <p class="text-sm font-semibold text-slate-700">Click to Deploy Camera or Upload File</p>
+                            <p class="text-xs text-slate-400">Supports direct identity capturing straight from your smartphone hardware camera seamlessly.</p>
+                        </div>
+                        <div class="hidden text-emerald-600 font-bold text-sm" id="fileSelectedName">
+                            <i class="fa-solid fa-circle-check mr-1"></i> Document Captured & Staged Securely!
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg tracking-wider text-sm uppercase">Secure Booking & Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-slate-900 text-white py-24 border-t border-slate-800">
+        <div class="container mx-auto px-4 grid lg:grid-cols-5 gap-12 items-center max-w-6xl">
+            <div class="lg:col-span-2 space-y-6">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">Physical Verification</span>
+                <h3 class="text-3xl font-extrabold text-white">Our Verified Hub Location</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">Centrally located behind Lahore Care Hospital in Gulistan Colony. Click on the map to directly open directions to Relax Inn Guest House.</p>
+                <div class="space-y-4 pt-4 border-t border-slate-800 text-sm">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-phone-volume text-lg"></i></div>
+                        <div>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Active Phone Hot-line</p>
+                            <p class="text-white font-semibold mt-0.5"><a href="tel:03124343223" class="hover:underline">0312-4343223</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-envelope-open-text text-lg"></i></div>
+                        <div>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Inbound Secured Email</p>
+                            <p class="text-white font-semibold mt-0.5"><a href="mailto:relaxinnguesthouse43@gmail.com" class="hover:underline">relaxinnguesthouse43@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
+                        <div>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Physical Hub Address</p>
+                            <p class="text-white font-semibold mt-0.5 leading-relaxed">Relax Inn Guest House, Behind Lahore Care Hospital, Gulistan Colony Street No. 1, Lahore, Pakistan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-3 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 h-96 relative group cursor-pointer">
+                <a href="https://maps.google.com" target="_blank" class="block w-full h-full">
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <span class="bg-amber-500 text-slate-900 font-bold px-4 py-2 rounded-xl shadow-lg">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 text-center py-8 text-xs border-t border-slate-900">
+        <p class="mb-2">© 2026 RelaxInn.com. All Rights Reserved. Enterprise Level Encrypted & Global SEO Engineered Framework.</p>
+    </footer>
+
+    <script>
+        const cnicInput = document.getElementById('cnicUpload');
+        if (cnicInput) {
+            cnicInput.addEventListener('change', function() {
+                if (this.files && this.files.length > 0) {
+                    document.getElementById('uploadPrompt').classList.add('hidden');
+                    document.getElementById('fileSelectedName').classList.remove('hidden');
+                }
+            });
+        }
+
+        function selectRoom(type) {
+            const selectBox = document.getElementById('roomType');
+            if (type === 'ac') {
+                selectBox.value = 'Executive AC Room (Rs. 6,000)';
+            } else {
+                selectBox.value = 'Standard Non-AC Room (Rs. 4,000)';
+            }
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const checkin = document.getElementById('checkIn').value;
+            const checkout = document.getElementById('checkOut').value;
+            const room = document.getElementById('roomType').value;
+            const cnic = document.getElementById('custCnic').value;
+
+            const myWhatsAppNumber = "923124343223"; 
+
+            const messageText = `*NEW BOOKING ALERT - RELAX INN*%0A%0A` +
+                                `*Name:* ${name}%0A` +
+                                `*Phone:* ${phone}%0A` +
+                                `*CNIC:* ${cnic}%0A` +
+                                `*Room Type:* ${room}%0A` +
+                                `*Check-In:* ${checkin}%0A` +
+                                `*Check-Out:* ${checkout}%0A%0A` +
+                                `_Please verify CNIC photo._`;
+
+            const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${messageText}`;
+            
+            const alertElement = document.getElementById('successMessage');
+            if (alertElement) {
+                alertElement.classList.remove('hidden');
+                alertElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
+            window.open(whatsappUrl, '_blank');
+
+            setTimeout(() => {
+                document.getElementById('bookingForm').reset();
+                const uploadPrompt = document.getElementById('uploadPrompt');
+                const fileSelectedName = document.getElementById('fileSelectedName');
+                if (uploadPrompt) uploadPrompt.classList.remove('hidden');
+                if (fileSelectedName) fileSelectedName.classList.add('hidden');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
