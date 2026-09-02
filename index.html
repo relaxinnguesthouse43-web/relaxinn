@@ -365,3 +365,26 @@ src="https://www.facebook.com/tr?id=1672773807321219&ev=PageView&noscript=1"
     </script>
 </body>
 </html>
+<script>
+        // 1. Date restriction code yahan paste karein:
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            const checkInInput = document.getElementById('checkIn');
+            const checkOutInput = document.getElementById('checkOut');
+            
+            if (checkInInput && checkOutInput) {
+                checkInInput.min = today;
+                
+                checkInInput.addEventListener('change', () => {
+                    checkOutInput.min = checkInInput.value;
+                    if (checkOutInput.value && checkOutInput.value < checkInInput.value) {
+                        checkOutInput.value = checkInInput.value;
+                    }
+                });
+            }
+        });
+
+        // 2. Aapke baaki purane functions (cnicInput, selectRoom, handleFormSubmit) yahan neechay waise hi rahenge...
+    </script>
+</body>
+</html>
