@@ -323,18 +323,17 @@ src="https://www.facebook.com/tr?id=771549606053159&ev=PageView&noscript=1"
             const checkin = document.getElementById('checkIn').value;
             const checkout = document.getElementById('checkOut').value;
             const room = document.getElementById('roomType').value;
-            const cnic = document.getElementById('custCnic').value;
+            
 
             const myWhatsAppNumber = "923124343223"; 
 
             const messageText = `*NEW BOOKING ALERT - RELAX INN*%0A%0A` +
                                 `*Name:* ${name}%0A` +
                                 `*Phone:* ${phone}%0A` +
-                                `*CNIC:* ${cnic}%0A` +
                                 `*Room Type:* ${room}%0A` +
                                 `*Check-In:* ${checkin}%0A` +
                                 `*Check-Out:* ${checkout}%0A%0A` +
-                                `_Please verify CNIC photo._`;
+                                
 
             const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${messageText}`;
             
