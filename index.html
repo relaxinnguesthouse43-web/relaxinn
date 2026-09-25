@@ -515,34 +515,52 @@
             <option value="10">10</option><option value="11">11</option><option value="12">12</option>
         </select>
         
-        <!-- Minute Select -->
-        <select id="checkInMinute" required class="form-input w-1/3 p-3 text-lg h-12 rounded-lg border border-gray-300">
-            <option value="00">00</option>
-            <option value="15">15</option>
-            <option value="30">30</option>
-            <option value="45">45</option>
-        </select>
-        
-        <!-- AM/PM Select -->
-        <select id="checkInAmpm" required class="form-input w-1/3 p-3 text-lg h-12 rounded-lg border border-gray-300">
-            <option value="AM">AM</option>
-            <option value="PM">PM</option>
-        </select>
+       <form class="max-w-md mx-auto p-4 space-y-6">
+
+  <!-- Check-in Time Input (Large & 12-Hour Dropdowns) -->
+  <div class="space-y-2">
+    <label class="block text-lg font-semibold text-gray-800">Check-in Time</label>
+    <div class="flex gap-2">
+      <!-- Hour -->
+      <select id="checkInHour" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
+        <option value="" disabled selected>Hour</option>
+        <option value="01">01</option><option value="02">02</option><option value="03">03</option>
+        <option value="04">04</option><option value="05">05</option><option value="06">06</option>
+        <option value="07">07</option><option value="08">08</option><option value="09">09</option>
+        <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+      </select>
+
+      <!-- Minute -->
+      <select id="checkInMinute" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
+        <option value="00">00</option>
+        <option value="15">15</option>
+        <option value="30">30</option>
+        <option value="45">45</option>
+      </select>
+
+      <!-- AM/PM -->
+      <select id="checkInAmpm" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
     </div>
-</div>
+  </div>
 
-<!-- Married Status Radio (Large) -->
-<label class="flex items-center gap-3 p-3 text-lg cursor-pointer">
-    <input type="radio" name="guestStatus" id="statusMarried" value="Married" required class="w-5 h-5 text-blue-600">
-    <span>Married Family / Couple</span>
-</label>
+  <!-- Guest Status Options (Large & Clear Buttons) -->
+  <div class="space-y-3">
+    <label class="block text-lg font-semibold text-gray-800">Guest Status</label>
+    
+    <!-- Married Option -->
+    <label for="statusMarried" class="flex items-center gap-3 p-4 border border-gray-300 rounded-lg cursor-pointer bg-white hover:bg-gray-50 active:bg-blue-50">
+      <input type="radio" name="guestStatus" id="statusMarried" value="Married" required class="w-6 h-6 text-blue-600 focus:ring-blue-500 border-gray-300">
+      <span class="text-lg font-medium text-gray-800">Married Family / Couple</span>
+    </label>
 
-<!-- Single Status Radio (Large) -->
-<label class="flex items-center gap-3 p-3 text-lg cursor-pointer">
-    <input type="radio" name="guestStatus" id="statusSingle" value="Single" class="w-5 h-5 text-blue-600">
-    <span>Single Person</span>
-</label>
-        }
-    </script>
-</body>
-</html>
+    <!-- Single Option -->
+    <label for="statusSingle" class="flex items-center gap-3 p-4 border border-gray-300 rounded-lg cursor-pointer bg-white hover:bg-gray-50 active:bg-blue-50">
+      <input type="radio" name="guestStatus" id="statusSingle" value="Single" class="w-6 h-6 text-blue-600 focus:ring-blue-500 border-gray-300">
+      <span class="text-lg font-medium text-gray-800">Single Person</span>
+    </label>
+  </div>
+
+</form>
