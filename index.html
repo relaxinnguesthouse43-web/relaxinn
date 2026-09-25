@@ -23,24 +23,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relax Inn Guest House | Premium Stay & Online Booking Lahore</title>
     
-    <!-- Speed Optimization: Resource Preconnecting -->
+    <!-- Speed Preconnect Protocols -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Premium Fonts: Cinzel for Royal Headings & Plus Jakarta Sans for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://i.postimg.cc/7L47jq20/Whats-App-Image-2026-07-12-at-10-37-55-AM.jpg');
-            background-size: cover;
-            background-position: center;
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #070a12;
+            color: #e2e8f0;
         }
         
-        /* Floating Contact Buttons */
+        .font-heading {
+            font-family: 'Cinzel', serif;
+        }
+        
+        /* DARK BACKGROUND HERO IMAGE */
+        .hero-bg {
+            background-image: linear-gradient(rgba(7, 10, 18, 0.93), rgba(7, 10, 18, 0.93)), url('https://i.postimg.cc/7L47jq20/Whats-App-Image-2026-07-12-at-10-37-55-AM.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Floating Social Action Buttons */
         .floating-social-btn {
             position: fixed;
             bottom: 25px;
@@ -58,7 +71,7 @@
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -76,7 +89,7 @@
             border-radius: 50px;
             text-align: center;
             font-size: 28px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(220, 39, 67, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,110 +99,92 @@
             transform: scale(1.1);
         }
 
-        /* Gallery Styles */
+        /* Continuous Gallery Loop */
         .relax-gallery {
             position: relative;
             overflow: hidden;
-            padding: 90px 0;
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 80px 0;
+            background: #0d121f;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
         }
         .gallery-header {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 55px;
+            margin: 0 auto 50px;
             padding: 0 20px;
-        }
-        .gallery-tag {
-            display: inline-block;
-            margin-bottom: 12px;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: #d97706;
-            text-transform: uppercase;
-        }
-        .gallery-header h2 {
-            margin: 0;
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 900;
-            line-height: 1.1;
-            color: #0f172a;
-        }
-        .gallery-header p {
-            margin-top: 16px;
-            font-size: 16px;
-            color: #64748b;
         }
         .gallery-window {
             width: 100%;
             overflow: hidden;
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
         }
         .gallery-track {
             display: flex;
             width: max-content;
-            gap: 22px;
-            animation: relaxGalleryMove 55s linear infinite;
+            gap: 20px;
+            animation: relaxGalleryMove 45s linear infinite;
             will-change: transform;
         }
         .gallery-card {
-            flex: 0 0 330px;
-            width: 330px;
-            height: 410px;
+            flex: 0 0 320px;
+            width: 320px;
+            height: 400px;
             overflow: hidden;
-            background: #fff;
-            border-radius: 22px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #151d30;
+            border-radius: 16px;
+            border: 1px solid #283552;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            position: relative;
+            transition: transform 0.3s ease;
         }
         .gallery-card img {
             width: 100%;
             height: 100%;
             display: block;
             object-fit: cover;
-            transition: transform 0.7s ease;
+            transition: transform 0.5s ease;
         }
         .gallery-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 55px rgba(15, 23, 42, 0.18);
+            transform: translateY(-6px);
         }
         .gallery-card:hover img {
-            transform: scale(1.07);
+            transform: scale(1.06);
         }
         .gallery-window:hover .gallery-track {
             animation-play-state: paused;
         }
+
         @keyframes relaxGalleryMove {
             from { transform: translateX(0); }
-            to { transform: translateX(calc(-50% - 11px)); }
+            to { transform: translateX(calc(-50% - 10px)); }
         }
         @media (max-width: 768px) {
-            .relax-gallery { padding: 70px 0; }
-            .gallery-header { margin-bottom: 40px; }
-            .gallery-card { flex: 0 0 270px; width: 270px; height: 350px; }
-            .gallery-track { gap: 16px; animation-duration: 45s; }
+            .gallery-card { flex: 0 0 260px; width: 260px; height: 340px; }
             .floating-social-btn { bottom: 15px; right: 15px; }
             .whatsapp-float, .insta-float { width: 48px; height: 48px; font-size: 24px; }
         }
-        @media (max-width: 480px) {
-            .relax-gallery { padding: 60px 0; }
-            .gallery-header h2 { font-size: 30px; }
-            .gallery-header p { font-size: 14px; }
-            .gallery-card { flex: 0 0 240px; width: 240px; height: 310px; border-radius: 18px; }
-            .gallery-track { gap: 14px; animation-duration: 38s; }
+
+        /* Modal Screen Animations */
+        .modal-active {
+            display: flex !important;
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        @media (prefers-reduced-motion: reduce) {
-            .gallery-track { animation: none; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Prevent Manual Typing in Date Inputs & Show Calendar Cursor */
+        input[type="date"] {
+            cursor: pointer;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
+<body class="antialiased selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- FLOATING DIRECT BUTTONS (WHATSAPP & INSTAGRAM) -->
+    <!-- FLOATING DIRECT BUTTONS -->
     <div class="floating-social-btn">
         <a href="https://wa.me/923124343223" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -199,281 +194,374 @@
         </a>
     </div>
 
-    <header class="bg-slate-900 text-white sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg border-b border-slate-800">
+    <!-- MAIN HEADER -->
+    <header class="bg-slate-950/90 text-white sticky top-0 z-50 backdrop-blur-md shadow-2xl border-b border-slate-800/80">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="flex items-center space-x-2">
+            <a href="#home" class="flex items-center space-x-3">
                 <i class="fa-solid fa-hotel text-amber-500 text-2xl"></i>
-                <span class="text-2xl font-extrabold tracking-tight">
+                <span class="text-2xl font-black font-heading tracking-wider">
                     RELAX <span class="text-amber-500">INN</span>
                 </span>
             </a>
-            <nav class="hidden lg:flex space-x-8 font-semibold text-sm uppercase tracking-wider text-slate-300">
+            <nav class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-300">
                 <a href="#home" class="hover:text-amber-500 transition duration-300">Home</a>
                 <a href="#rooms" class="hover:text-amber-500 transition duration-300">Rooms</a>
                 <a href="#gallery" class="hover:text-amber-500 transition duration-300">Gallery</a>
                 <a href="#facilities" class="hover:text-amber-500 transition duration-300">Amenities</a>
-                <a href="#booking" class="hover:text-amber-500 transition duration-300">Online Reservation</a>
+                <a href="#booking" class="hover:text-amber-500 transition duration-300">Reservation</a>
                 <a href="#contact" class="hover:text-amber-500 transition duration-300">Location</a>
             </nav>
             <div class="flex items-center space-x-4">
                 <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="text-xl text-pink-500 hover:text-pink-400 transition" title="Instagram Profile">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="tel:03124343223" class="hidden sm:inline-flex items-center text-sm font-bold text-amber-500 hover:text-amber-400">
+                <a href="tel:03124343223" class="hidden sm:inline-flex items-center text-xs font-extrabold text-amber-500 hover:text-amber-400 tracking-wider">
                     <i class="fa-solid fa-phone mr-2"></i> 0312-4343223
                 </a>
-                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold px-5 py-2.5 rounded-lg transition duration-300 transform hover:-translate-y-0.5 shadow-md text-sm uppercase tracking-wider">Book Now</a>
+                <a href="#booking" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-2.5 rounded-xl transition duration-300 shadow-md text-xs uppercase tracking-wider">Book Stay</a>
             </div>
       </div>
-</header>
+    </header>
 
-<section id="home" class="hero-bg text-white py-32 md:py-40 text-center flex items-center justify-center relative bg-gradient-to-b from-slate-900 to-slate-800">
-    <div class="container mx-auto px-4 max-w-4xl relative z-10">
-        <!-- Badges / Tags -->
-        <div class="flex flex-wrap justify-center items-center gap-3 mb-6">
-            <span class="text-amber-400 font-bold uppercase tracking-widest text-xs bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/30 shadow-sm backdrop-blur-md">
-                Guest House
-            </span>
-            <span class="text-rose-400 font-bold uppercase tracking-widest text-xs bg-rose-500/10 px-4 py-1.5 rounded-full border border-rose-500/30 backdrop-blur-md">
-                Strictly Not For Unmarried Couples
-            </span>
-        </div>
+    <!-- HERO SECTION WITH RESTORED TEXT & DARK BACKGROUND IMAGE -->
+    <section id="home" class="hero-bg text-white py-32 md:py-44 text-center flex items-center justify-center relative">
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <div class="flex flex-wrap justify-center items-center gap-3 mb-6">
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/30 backdrop-blur-md">
+                    Exclusive Guest House
+                </span>
+                <span class="text-rose-400 font-bold uppercase tracking-widest text-xs bg-rose-500/10 px-4 py-1.5 rounded-full border border-rose-500/30 backdrop-blur-md">
+                    Strictly Not For Unmarried Couples
+                </span>
+            </div>
 
-        <!-- Heading -->
-        <h1 class="text-4xl md:text-6xl font-black tracking-tight mt-4 mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-300">
-            Premium Accommodation for Families, Married Couples & Individuals
-        </h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold font-heading tracking-tight mt-4 mb-6 leading-tight text-white">
+                Luxury Accommodation for Families & Corporate Guests
+            </h1>
 
-        <!-- Subheading -->
-        <p class="text-lg md:text-xl text-slate-300 font-normal max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow">
-            Enjoy uncompromised 24/7 security, uninterrupted power backup, and high-end living space tailored specifically for families and corporate guests.
-        </p>
+            <p class="text-slate-300 font-medium text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Enjoy 24/7 high-grade security, uninterrupted dual power backup, and top-tier hospitality in Lahore.
+            </p>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-amber-500/20 hover:-translate-y-0.5">
-                Reserve Online
-            </a>
-            <a href="https://wa.me/923124343223" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-emerald-600/20 hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <i class="fa-brands fa-whatsapp text-xl"></i> Direct WhatsApp
-            </a>
-        </div>
-    </div>
-</section>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-xl transition duration-300 shadow-xl text-xs uppercase tracking-wider">
+                    Reserve Online Now
+                </a>
+                <a href="https://wa.me/923124343223" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- ROOMS SECTION -->
     <section id="rooms" class="py-24 container mx-auto px-4">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h3 class="text-xs font-bold tracking-widest text-amber-600 uppercase mb-3">Accommodations</h3>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950">Our Premium Rooms & Rates</h2>
+            <span class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-2 block">Luxury Accommodations</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-white">Available Suites & Rates</h2>
         </div>
         
         <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 group transition-all duration-300 hover:shadow-2xl">
-                <div class="relative h-72 overflow-hidden bg-slate-900">
-                    <img src="https://i.postimg.cc/pXpKx7Lf/Whats-App-Image-2026-09-13-at-8-11-22-PM.jpg" alt="Executive AC Room Luxury Single Bed" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
-                    <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-amber-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-snowflake mr-1"></i> Full AC | Luxury Single Bed</span>
+            <!-- Executive AC Room -->
+            <div class="bg-slate-900/90 rounded-2xl shadow-2xl overflow-hidden border border-slate-800 group transition-all duration-300 hover:border-amber-500/40">
+                <div class="relative h-72 overflow-hidden bg-slate-950">
+                    <img src="https://i.postimg.cc/pXpKx7Lf/Whats-App-Image-2026-09-13-at-8-11-22-PM.jpg" alt="Executive AC Room" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md text-amber-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-snowflake mr-1"></i> Full AC | Luxury Bed</span>
                 </div>
                 <div class="p-8">
-                    <h4 class="text-2xl font-bold text-slate-950 mb-3">Executive AC Room</h4>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Fully tailored premium experience with spacious Single beds, responsive climate control, high-grade linen, and dedicated dynamic spaces.</p>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                    <h3 class="text-2xl font-bold font-heading text-white mb-3">Executive AC Room</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">Fully tailored premium experience with spacious bedding, climate control, premium linen, and dedicated dynamic spaces.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-800">
                         <div>
-                            <span class="block text-2xl font-extrabold text-slate-950">PKR 6500</span>
-                            <span class="text-xs text-slate-400 font-medium">Per 24 Hour Cycle</span>
+                            <span class="block text-2xl font-extrabold text-amber-500">PKR 6,500</span>
+                            <span class="text-xs text-slate-500 font-medium">Per 24 Hour Stay</span>
                         </div>
-                        <a href="#booking" onclick="selectRoom('ac')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-xl transition duration-300 text-sm">Select Room</a>
+                        <a href="#booking" onclick="selectRoom('Executive AC Room (Rs. 6,500)')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 group transition-all duration-300 hover:shadow-2xl">
-                <div class="relative h-72 overflow-hidden bg-slate-900">
-                    <img src="https://i.postimg.cc/sxzx1sbV/Whats-App-Image-2026-09-13-at-6-20-08-PM-(1).jpg" alt="Standard Non-AC Room" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
-                    <span class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-leaf mr-1"></i> Eco Ventilated | Single Beds</span>
+            <!-- Standard Non-AC Room -->
+            <div class="bg-slate-900/90 rounded-2xl shadow-2xl overflow-hidden border border-slate-800 group transition-all duration-300 hover:border-amber-500/40">
+                <div class="relative h-72 overflow-hidden bg-slate-950">
+                    <img src="https://i.postimg.cc/sxzx1sbV/Whats-App-Image-2026-09-13-at-6-20-08-PM-(1).jpg" alt="Standard Non-AC Room" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 uppercase tracking-wider"><i class="fa-solid fa-leaf mr-1"></i> Eco Ventilated | Single Beds</span>
                 </div>
                 <div class="p-8">
-                    <h4 class="text-2xl font-bold text-slate-950 mb-3">Standard Non-AC Room</h4>
-                    <p class="text-slate-600 mb-6 leading-relaxed">Perfect budget friendly layout offering comfortable single bedding, great spatial dynamics, structural air-flow, and premium hospitality value without AC.</p>
-                    <div class="flex justify-between items-center pt-4 border-t border-slate-100">
+                    <h3 class="text-2xl font-bold font-heading text-white mb-3">Standard Non-AC Room</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">Perfect budget-friendly option offering comfortable single bedding, excellent airflow, and high hospitality value.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-800">
                         <div>
-                            <span class="block text-2xl font-extrabold text-slate-950">PKR 4500</span>
-                            <span class="text-xs text-slate-400 font-medium">Per 24 Hour Cycle</span>
+                            <span class="block text-2xl font-extrabold text-amber-500">PKR 4,500</span>
+                            <span class="text-xs text-slate-500 font-medium">Per 24 Hour Stay</span>
                         </div>
-                        <a href="#booking" onclick="selectRoom('non-ac')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-xl transition duration-300 text-sm">Select Room</a>
+                        <a href="#booking" onclick="selectRoom('Standard Non-AC Room (Rs. 4,500)')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
+    <!-- CLEAN GALLERY SECTION -->
     <section id="gallery" class="relax-gallery">
         <div class="gallery-header">
-            <span class="gallery-tag">OUR PROPERTY</span>
-            <h2>Relax Inn Guest House</h2>
-            <p>Explore our rooms, parking area, washrooms and guest facilities.</p>
+            <span class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-2 block">Visual Experience</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-white">Property Gallery</h2>
+            <p class="text-slate-400 mt-2 text-sm">Explore our bedrooms, parking space, pristine bathrooms, and reception spaces.</p>
         </div>
 
         <div class="gallery-window">
             <div class="gallery-track">
-                <div class="gallery-card"><img src="https://i.postimg.cc/hGJWWqRX/Whats-App-Image-2026-07-12-at-9-43-24-AM.jpg" alt="Relax Inn Guest House Bed Room" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/nc8rXcK4/Whats-App-Image-2026-09-13-at-6-57-04-PM.jpg" alt="Relax Inn Guest House Room" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/R0q4PjQH/Whats-App-Image-2026-09-13-at-6-57-04-PM-(1).jpg" alt="Relax Inn Bed Area" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/VvJKpWZn/Whats-App-Image-2026-09-13-at-6-20-06-PM-(1).jpg" alt="Relax Inn Guest House Parking Area" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/XJtBvNqM/Whats-App-Image-2026-09-13-at-6-20-08-PM.jpg" alt="Relax Inn Property and Parking Area" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/QMj0h3n3/Whats-App-Image-2026-09-13-at-6-20-08-PM-(2).jpg" alt="Relax Inn Guest House Washroom" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/y6wqBDhd/Whats-App-Image-2026-09-13-at-6-20-07-PM.jpg" alt="Relax Inn Attached Washroom" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/nzDk1hXc/Whats-App-Image-2026-09-13-at-10-14-52-PM.jpg" alt="Relax Inn Guest Area" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/0yy0Bf6v/Whats-App-Image-2026-09-13-at-10-14-53-PM.jpg" alt="Relax Inn Guest House Property" loading="lazy" decoding="async"></div>
-                <div class="gallery-card"><img src="https://i.postimg.cc/y6hh65cC/Whats-App-Image-2026-09-13-at-10-16-11-PM.jpg" alt="Relax Inn Guest House Interior" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/hGJWWqRX/Whats-App-Image-2026-07-12-at-9-43-24-AM.jpg" alt="Bedroom Interior" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/nc8rXcK4/Whats-App-Image-2026-09-13-at-6-57-04-PM.jpg" alt="Bed Area" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/R0q4PjQH/Whats-App-Image-2026-09-13-at-6-57-04-PM-(1).jpg" alt="Executive Suite" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/VvJKpWZn/Whats-App-Image-2026-09-13-at-6-20-06-PM-(1).jpg" alt="Secure Parking" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/XJtBvNqM/Whats-App-Image-2026-09-13-at-6-20-08-PM.jpg" alt="Front Area" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/QMj0h3n3/Whats-App-Image-2026-09-13-at-6-20-08-PM-(2).jpg" alt="Clean Bathroom" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/y6wqBDhd/Whats-App-Image-2026-09-13-at-6-20-07-PM.jpg" alt="Attached Bathroom" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/nzDk1hXc/Whats-App-Image-2026-09-13-at-10-14-52-PM.jpg" alt="Reception Lounge" loading="lazy" decoding="async"></div>
+                <div class="gallery-card"><img src="https://i.postimg.cc/0yy0Bf6v/Whats-App-Image-2026-09-13-at-10-14-53-PM.jpg" alt="Lounge Area" loading="lazy" decoding="async"></div>
 
-                <!-- DUPLICATE FOR INFINITE LOOP -->
+                <!-- DUPLICATES FOR LOOP -->
                 <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/hGJWWqRX/Whats-App-Image-2026-07-12-at-9-43-24-AM.jpg" alt="" loading="lazy" decoding="async"></div>
                 <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/nc8rXcK4/Whats-App-Image-2026-09-13-at-6-57-04-PM.jpg" alt="" loading="lazy" decoding="async"></div>
                 <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/R0q4PjQH/Whats-App-Image-2026-09-13-at-6-57-04-PM-(1).jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/VvJKpWZn/Whats-App-Image-2026-09-13-at-6-20-06-PM-(1).jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/XJtBvNqM/Whats-App-Image-2026-09-13-at-6-20-08-PM.jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/QMj0h3n3/Whats-App-Image-2026-09-13-at-6-20-08-PM-(2).jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/y6wqBDhd/Whats-App-Image-2026-09-13-at-6-20-07-PM.jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/nzDk1hXc/Whats-App-Image-2026-09-13-at-10-14-52-PM.jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/0yy0Bf6v/Whats-App-Image-2026-09-13-at-10-14-53-PM.jpg" alt="" loading="lazy" decoding="async"></div>
-                <div class="gallery-card" aria-hidden="true"><img src="https://i.postimg.cc/y6hh65cC/Whats-App-Image-2026-09-13-at-10-16-11-PM.jpg" alt="" loading="lazy" decoding="async"></div>
             </div>
         </div>
     </section>
 
-    <section id="facilities" class="bg-slate-900 text-white py-24">
+    <!-- FACILITIES SECTION -->
+    <section id="facilities" class="bg-slate-950 py-24">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h3 class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-3">Services</h3>
-                <h2 class="text-3xl md:text-4xl font-extrabold">World-Class Utilities</h2>
+                <span class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-2 block">Guest Amenities</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-white">World-Class Facilities</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl transition hover:border-amber-500/40 duration-300">
                     <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-wifi"></i></div>
-                    <h4 class="text-xl font-bold mb-2">High-Speed WiFi</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Uncapped gigabit fiber-optic connection seamless across all floors.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">High-Speed WiFi</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Uncapped gigabit fiber connection available across all suites.</p>
                 </div>
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl transition hover:border-amber-500/40 duration-300">
                     <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-snowflake"></i></div>
-                    <h4 class="text-xl font-bold mb-2">Climate Control</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Premium localized air-conditioning processing extreme heat loads smoothly.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Climate Control</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Responsive localized air-conditioning for total thermal comfort.</p>
                 </div>
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl transition hover:border-amber-500/40 duration-300">
                     <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h4 class="text-xl font-bold mb-2">24/7 Shield Security</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Advanced active perimeter patrols, entry logging, and robust CCTV surveillance arrays.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">24/7 Security</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Perimeter active patrols, entry logging, and full CCTV surveillance.</p>
                 </div>
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-2xl transition hover:bg-slate-800 duration-300">
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl transition hover:border-amber-500/40 duration-300">
                     <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-bolt"></i></div>
-                    <h4 class="text-xl font-bold mb-2">Dual Power Backup</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Smart instant automatic failover generation systems providing zero downtime.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white">Power Backup</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Automated instant failover generators for zero electricity interruptions.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- BOOKING FORM SECTION -->
     <section id="booking" class="py-24 container mx-auto px-4 max-w-3xl">
-        <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-100 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-amber-500 to-indigo-600"></div>
+        <div class="bg-slate-900/90 rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-500 to-amber-700"></div>
             
             <div class="text-center mb-10">
-                <h3 class="text-3xl font-extrabold text-slate-950 mb-3">Secure Online Reservation</h3>
-                <p class="text-slate-500">Global encrypted real-time system with instant notification protocols.</p>
+                <h2 class="text-3xl font-extrabold font-heading text-white mb-2">Online Reservation</h2>
+                <p class="text-slate-400 text-sm">Real-time instant booking system.</p>
             </div>
-            
-            <div id="successMessage" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 p-6 mb-8 rounded-2xl shadow-sm flex items-start space-x-4 transition-all duration-300" role="alert">
-                <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white text-lg shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></div>
-                <div>
-                    <h4 class="text-lg font-bold text-emerald-950 mb-1">Congratulations 🎉 Your room has been booked!</h4>
-                    <p class="text-sm text-emerald-700 leading-relaxed">Thank you for reserving your room at Relax Inn. We are redirecting you to confirm your booking instantly via WhatsApp...</p>
-                </div>
-            </div>
-            
+
             <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <!-- Name & Phone -->
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Full Name</label>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Full Name</label>
                         <div class="relative">
-                            <i class="fa-solid fa-user absolute left-4 top-3.5 text-slate-400"></i>
-                            <input type="text" id="custName" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition" placeholder="John Doe">
+                            <i class="fa-solid fa-user absolute left-4 top-3.5 text-slate-500"></i>
+                            <input type="text" id="custName" required class="w-full pl-11 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition text-sm" placeholder="Your Name">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Mobile Number</label>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Mobile Number</label>
                         <div class="relative">
-                            <i class="fa-solid fa-phone absolute left-4 top-3.5 text-slate-400"></i>
-                            <input type="tel" id="custPhone" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition" placeholder="0312-4343223">
+                            <i class="fa-solid fa-phone absolute left-4 top-3.5 text-slate-500"></i>
+                            <input type="tel" id="custPhone" required class="w-full pl-11 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition text-sm" placeholder="0312-4343223">
                         </div>
                     </div>
                 </div>
+
+                <!-- Dates (Calendar Picker Only - No Typing & Prevents Past Dates) -->
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Check-in Date</label>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Check-in Date</label>
                         <div class="relative">
-                            <i class="fa-solid fa-calendar-check absolute left-4 top-3.5 text-slate-400"></i>
-                            <input type="date" id="checkIn" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition">
+                            <i class="fa-solid fa-calendar-check absolute left-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                            <input type="date" id="checkIn" required onkeydown="return false;" onclick="this.showPicker && this.showPicker()" class="w-full pl-11 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition text-sm select-none">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Check-out Date</label>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Check-out Date</label>
                         <div class="relative">
-                            <i class="fa-solid fa-calendar-xmark absolute left-4 top-3.5 text-slate-400"></i>
-                            <input type="date" id="checkOut" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900 transition">
+                            <i class="fa-solid fa-calendar-xmark absolute left-4 top-3.5 text-slate-500 pointer-events-none"></i>
+                            <input type="date" id="checkOut" required onkeydown="return false;" onclick="this.showPicker && this.showPicker()" class="w-full pl-11 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition text-sm select-none">
                         </div>
                     </div>
                 </div>
+
+                <!-- 1-12 COUNTING CHECK-IN & FIXED CHECK-OUT -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <!-- Check-in Time -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Check-in Time</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <select id="checkInHour" required class="p-3 text-sm font-semibold border border-slate-800 rounded-xl bg-slate-950 text-white focus:ring-2 focus:ring-amber-500">
+                                <option value="" disabled selected>Time (1 - 12)</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select id="checkInAmpm" required class="p-3 text-sm font-semibold border border-slate-800 rounded-xl bg-slate-950 text-white focus:ring-2 focus:ring-amber-500">
+                                <option value="AM">AM</option>
+                                <option value="PM" selected>PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Fixed Check-out Time -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Check-out Time</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-clock absolute left-4 top-3.5 text-slate-500"></i>
+                            <input type="text" id="checkOutTime" value="12:00 PM (Fixed)" readonly class="w-full pl-11 pr-4 py-3 border border-slate-800 bg-slate-950/60 text-slate-400 rounded-xl font-semibold cursor-not-allowed text-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GUEST STATUS CHOICE BOXES INCLUDING UNMARRIED -->
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Guest Status</label>
+                    <div class="grid sm:grid-cols-3 gap-3">
+                        <label for="statusMarried" class="flex items-center gap-3 p-3.5 border border-slate-800 rounded-xl cursor-pointer bg-slate-950 hover:bg-slate-800 transition border-2 border-transparent has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/10">
+                            <input type="radio" name="guestStatus" id="statusMarried" value="Married Family / Couple" required class="w-4 h-4 text-amber-500 focus:ring-amber-500 border-slate-700">
+                            <span class="text-xs font-bold text-slate-200">Married / Family</span>
+                        </label>
+                        <label for="statusSingle" class="flex items-center gap-3 p-3.5 border border-slate-800 rounded-xl cursor-pointer bg-slate-950 hover:bg-slate-800 transition border-2 border-transparent has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/10">
+                            <input type="radio" name="guestStatus" id="statusSingle" value="Single Person" class="w-4 h-4 text-amber-500 focus:ring-amber-500 border-slate-700">
+                            <span class="text-xs font-bold text-slate-200">Single Person</span>
+                        </label>
+                        <label for="statusUnmarried" class="flex items-center gap-3 p-3.5 border border-slate-800 rounded-xl cursor-pointer bg-slate-950 hover:bg-slate-800 transition border-2 border-transparent has-[:checked]:border-rose-500 has-[:checked]:bg-rose-500/10">
+                            <input type="radio" name="guestStatus" id="statusUnmarried" value="Unmarried Couple" class="w-4 h-4 text-rose-500 focus:ring-rose-500 border-slate-700">
+                            <span class="text-xs font-bold text-slate-200">Unmarried Couple</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Room Category Select -->
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Room Arrangement Category</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Room Category</label>
                     <div class="relative">
-                        <i class="fa-solid fa-bed absolute left-4 top-3.5 text-slate-400"></i>
-                        <select id="roomType" required class="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 transition appearance-none">
+                        <i class="fa-solid fa-bed absolute left-4 top-3.5 text-slate-500"></i>
+                        <select id="roomType" required class="w-full pl-11 pr-4 py-3 border border-slate-800 rounded-xl bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition appearance-none font-semibold text-sm">
                             <option value="Executive AC Room (Rs. 6,500)">Executive AC Room (PKR 6,500 / 24 Hours)</option>
                             <option value="Standard Non-AC Room (Rs. 4,500)">Standard Non-AC Room (PKR 4,500 / 24 Hours)</option>
                         </select>
-                        <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-400 pointer-events-none"></i>
+                        <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-500 pointer-events-none text-xs"></i>
                     </div>
                 </div>
-                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg tracking-wider text-sm uppercase">Secure Booking & Send Message</button>
+
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl transition duration-300 shadow-xl tracking-wider text-xs uppercase">Confirm Room Reservation</button>
             </form>
         </div>
     </section>
 
-    <section id="contact" class="bg-slate-900 text-white py-24 border-t border-slate-800">
+    <!-- SUCCESS POPUP / MODAL SCREEN -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-[1000] hidden items-center justify-center p-4">
+        <div class="bg-slate-900 rounded-3xl max-w-lg w-full p-8 shadow-2xl border border-slate-800 text-center relative transform transition-all scale-100">
+            <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center text-4xl mx-auto mb-5 border border-emerald-500/30">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <h3 class="text-2xl font-black font-heading text-white mb-2">Your Room is Booked! 🎉</h3>
+            <p class="text-slate-400 text-xs mb-6">Reservation captured successfully. Here are your details:</p>
+
+            <div id="modalSummary" class="bg-slate-950 p-5 rounded-2xl text-left space-y-2 text-xs text-slate-300 border border-slate-800 mb-6 font-medium">
+                <!-- Summary Inject via JS -->
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-xs text-emerald-400 font-bold animate-pulse">Redirecting to WhatsApp to send reservation details...</p>
+                <button onclick="closeModalAndRedirect()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Open WhatsApp Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNMARRIED WARNING LARGE SCREEN MESSAGE -->
+    <div id="unmarriedModal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-lg z-[1000] hidden items-center justify-center p-4">
+        <div class="bg-slate-900 rounded-3xl max-w-lg w-full p-8 md:p-10 shadow-2xl border border-rose-500/30 text-center relative transform transition-all scale-100">
+            <div class="w-20 h-20 bg-rose-500/10 text-rose-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 border border-rose-500/30">
+                <i class="fa-solid fa-ban"></i>
+            </div>
+            
+            <h3 class="text-3xl font-black font-heading text-white mb-4">Notice</h3>
+            
+            <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 p-6 rounded-2xl mb-8">
+                <p class="text-xl font-extrabold leading-relaxed">
+                    sir ye rooms hm families ko dete hai soory
+                </p>
+            </div>
+
+            <button onclick="closeUnmarriedModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 rounded-xl transition duration-300 border border-slate-700 text-xs uppercase tracking-wider">
+                Understand & Close
+            </button>
+        </div>
+    </div>
+
+    <!-- CONTACT & FOOTER -->
+    <section id="contact" class="bg-slate-900/90 text-white py-24 border-t border-slate-800">
         <div class="container mx-auto px-4 grid lg:grid-cols-5 gap-12 items-center max-w-6xl">
             <div class="lg:col-span-2 space-y-6">
                 <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">Physical Verification</span>
-                <h3 class="text-3xl font-extrabold text-white">Our Verified Hub Location</h3>
+                <h2 class="text-3xl font-extrabold font-heading text-white">Guest House Location</h2>
                 <p class="text-slate-400 leading-relaxed text-sm">Centrally located behind Lahore Care Hospital in Gulistan Colony. Click on the map to directly open directions to Relax Inn Guest House.</p>
                 <div class="space-y-4 pt-4 border-t border-slate-800 text-sm">
                     <div class="flex items-start space-x-4">
-                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-phone-volume text-lg"></i></div>
+                        <div class="text-amber-500 mt-1"><i class="fa-solid fa-phone-volume text-lg"></i></div>
                         <div>
-                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Active Phone Hot-line</p>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Phone Hotline</p>
                             <p class="text-white font-semibold mt-0.5"><a href="tel:03124343223" class="hover:underline">0312-4343223</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="text-amber-400 mt-1"><i class="fa-brands fa-instagram text-lg"></i></div>
+                        <div class="text-amber-500 mt-1"><i class="fa-brands fa-instagram text-lg"></i></div>
                         <div>
-                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Official Instagram Page</p>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Instagram Page</p>
                             <p class="text-white font-semibold mt-0.5"><a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="hover:underline text-amber-400">@relaxinnguesthouse</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-envelope-open-text text-lg"></i></div>
+                        <div class="text-amber-500 mt-1"><i class="fa-solid fa-envelope-open-text text-lg"></i></div>
                         <div>
-                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Inbound Secured Email</p>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Inbound Email</p>
                             <p class="text-white font-semibold mt-0.5"><a href="mailto:relaxinnguesthouse43@gmail.com" class="hover:underline">relaxinnguesthouse43@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="text-amber-400 mt-1"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
+                        <div class="text-amber-500 mt-1"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
                         <div>
-                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Physical Hub Address</p>
-                            <p class="text-white font-semibold mt-0.5 leading-relaxed">Relax Inn Guest House, Behind Lahore Care Hospital, Gulistan Colony Street No. 1, Lahore, Pakistan.</p>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Address</p>
+                            <p class="text-white font-semibold mt-0.5 leading-relaxed text-xs">Relax Inn Guest House, Behind Lahore Care Hospital, Gulistan Colony Street No. 1, Lahore, Pakistan.</p>
                         </div>
                     </div>
                 </div>
@@ -498,69 +586,130 @@
             <a href="https://wa.me/923124343223" target="_blank" class="text-slate-400 hover:text-emerald-400 text-lg"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="text-slate-400 hover:text-pink-400 text-lg"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <p class="mb-2">© 2026 RelaxInn.com. All Rights Reserved. Enterprise Level Encrypted & Global SEO Engineered Framework.</p>
+        <p class="mb-2">© 2026 RelaxInn.com. All Rights Reserved.</p>
     </footer>
 
+    <!-- INTERACTIVE SCRIPT LOGIC -->
     <script>
-       <!-- Check-in Time Dropdowns (Large 12-Hour Format) -->
-<div class="mb-4">
-    <label class="block text-base font-medium text-gray-700 mb-1">Check-in Time</label>
-    <div class="flex gap-2">
-        <!-- Hour Select -->
-        <select id="checkInHour" required class="form-input w-1/3 p-3 text-lg h-12 rounded-lg border border-gray-300">
-            <option value="">Hour</option>
-            <option value="01">01</option><option value="02">02</option><option value="03">03</option>
-            <option value="04">04</option><option value="05">05</option><option value="06">06</option>
-            <option value="07">07</option><option value="08">08</option><option value="09">09</option>
-            <option value="10">10</option><option value="11">11</option><option value="12">12</option>
-        </select>
-        
-       <form class="max-w-md mx-auto p-4 space-y-6">
+        let redirectUrl = "";
 
-  <!-- Check-in Time Input (Large & 12-Hour Dropdowns) -->
-  <div class="space-y-2">
-    <label class="block text-lg font-semibold text-gray-800">Check-in Time</label>
-    <div class="flex gap-2">
-      <!-- Hour -->
-      <select id="checkInHour" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
-        <option value="" disabled selected>Hour</option>
-        <option value="01">01</option><option value="02">02</option><option value="03">03</option>
-        <option value="04">04</option><option value="05">05</option><option value="06">06</option>
-        <option value="07">07</option><option value="08">08</option><option value="09">09</option>
-        <option value="10">10</option><option value="11">11</option><option value="12">12</option>
-      </select>
+        // AUTO-SET MINIMUM DATE TO TODAY (Prevents 2020 or past dates selection)
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            const checkInInput = document.getElementById('checkIn');
+            const checkOutInput = document.getElementById('checkOut');
 
-      <!-- Minute -->
-      <select id="checkInMinute" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
-        <option value="00">00</option>
-        <option value="15">15</option>
-        <option value="30">30</option>
-        <option value="45">45</option>
-      </select>
+            checkInInput.min = today;
+            checkOutInput.min = today;
 
-      <!-- AM/PM -->
-      <select id="checkInAmpm" required class="w-1/3 p-3 text-lg font-medium border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 text-gray-800">
-        <option value="AM">AM</option>
-        <option value="PM">PM</option>
-      </select>
-    </div>
-  </div>
+            checkInInput.addEventListener('change', () => {
+                if(checkInInput.value) {
+                    checkOutInput.min = checkInInput.value;
+                }
+            });
+        });
 
-  <!-- Guest Status Options (Large & Clear Buttons) -->
-  <div class="space-y-3">
-    <label class="block text-lg font-semibold text-gray-800">Guest Status</label>
-    
-    <!-- Married Option -->
-    <label for="statusMarried" class="flex items-center gap-3 p-4 border border-gray-300 rounded-lg cursor-pointer bg-white hover:bg-gray-50 active:bg-blue-50">
-      <input type="radio" name="guestStatus" id="statusMarried" value="Married" required class="w-6 h-6 text-blue-600 focus:ring-blue-500 border-gray-300">
-      <span class="text-lg font-medium text-gray-800">Married Family / Couple</span>
-    </label>
+        function selectRoom(type) {
+            document.getElementById('roomType').value = type;
+        }
 
-    <!-- Single Option -->
-    <label for="statusSingle" class="flex items-center gap-3 p-4 border border-gray-300 rounded-lg cursor-pointer bg-white hover:bg-gray-50 active:bg-blue-50">
-      <input type="radio" name="guestStatus" id="statusSingle" value="Single" class="w-6 h-6 text-blue-600 focus:ring-blue-500 border-gray-300">
-      <span class="text-lg font-medium text-gray-800">Single Person</span>
-    </label>
-  </div>
+        function handleFormSubmit(event) {
+            event.preventDefault();
 
-</form>
+            const guestStatus = document.querySelector('input[name="guestStatus"]:checked')?.value || 'Not Specified';
+
+            // CHECK IF UNMARRIED - SHOW LARGE WARNING SCREEN
+            if (guestStatus === 'Unmarried Couple') {
+                document.getElementById('unmarriedModal').classList.add('modal-active');
+                return;
+            }
+
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            
+            const hour = document.getElementById('checkInHour').value;
+            const ampm = document.getElementById('checkInAmpm').value;
+            const checkInTime = `${hour}:00 ${ampm}`;
+            const checkOutTime = "12:00 PM";
+
+            const roomType = document.getElementById('roomType').value;
+
+            // Summary text in modal
+            document.getElementById('modalSummary').innerHTML = `
+                <p><strong>Guest Name:</strong> ${name}</p>
+                <p><strong>Mobile:</strong> ${phone}</p>
+                <p><strong>Guest Status:</strong> <span class="text-amber-500 font-bold">${guestStatus}</span></p>
+                <p><strong>Check-in:</strong> ${checkIn} at ${checkInTime}</p>
+                <p><strong>Check-out:</strong> ${checkOut} at ${checkOutTime}</p>
+                <p><strong>Selected Room:</strong> ${roomType}</p>
+            `;
+
+            // Prepare WhatsApp URL
+            const waText = `*New Booking Request*%0A%0A` +
+                           `*Name:* ${encodeURIComponent(name)}%0A` +
+                           `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                           `*Status:* ${encodeURIComponent(guestStatus)}%0A` +
+                           `*Check-in Date:* ${encodeURIComponent(checkIn)}%0A` +
+                           `*Check-in Time:* ${encodeURIComponent(checkInTime)}%0A` +
+                           `*Check-out Date:* ${encodeURIComponent(checkOut)}%0A` +
+                           `*Check-out Time:* 12:00 PM%0A` +
+                           `*Room Type:* ${encodeURIComponent(roomType)}`;
+
+            redirectUrl = `https://wa.me/923124343223?text=${waText}`;
+
+            // Show Confirmation Modal
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('modal-active');
+
+            setTimeout(() => {
+                closeModalAndRedirect();
+            }, 2500);
+        }
+
+        function closeModalAndRedirect() {
+            if(redirectUrl) {
+                window.open(redirectUrl, '_blank');
+            }
+            document.getElementById('bookingModal').classList.remove('modal-active');
+        }
+
+        function closeUnmarriedModal() {
+            document.getElementById('unmarriedModal').classList.remove('modal-active');
+        }
+    </script>
+</body>
+</html>
+<footer class="site-footer">
+    <p>
+        Made by <strong>Mughal Edits</strong> |
+        <a href="https://wa.me/923212816273" target="_blank">
+            0321-2816273
+        </a>
+    </p>
+</footer>
+
+<style>
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+}
+
+.site-footer strong {
+    color: #d4af37;
+}
+
+.site-footer a {
+    color: #d4af37;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+</style>
