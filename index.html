@@ -512,35 +512,20 @@
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const checkin = document.getElementById('checkIn').value;
-            const checkout = document.getElementById('checkOut').value;
-            const room = document.getElementById('roomType').value;
-            
-            const myWhatsAppNumber = "923124343223"; 
+        <!-- Check-in Time (Flexible Arrival Time) -->
+<input type="time" id="checkInTime" required class="form-input">
 
-            // Formatted message text
-            const rawMessage = `*NEW BOOKING CONFIRMATION - RELAX INN*\n\n` +
-                               `Hello, your room has been booked!\n\n` +
-                               `*Guest Name:* ${name}\n` +
-                               `*Phone:* ${phone}\n` +
-                               `*Room Type:* ${room}\n` +
-                               `*Check-In:* ${checkin}\n` +
-                               `*Check-Out:* ${checkout}\n\n` +
-                               `Please confirm my reservation.`;
+<!-- Married Status Checkbox / Radio -->
+<label class="flex items-center gap-2">
+    <input type="radio" name="guestStatus" id="statusMarried" value="Married" required>
+    <span>Married Family / Couple</span>
+</label>
 
-            const encodedMessage = encodeURIComponent(rawMessage);
-            const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${encodedMessage}`;
-            
-            const alertElement = document.getElementById('successMessage');
-            if (alertElement) {
-                alertElement.classList.remove('hidden');
-                alertElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+<!-- Single Status Checkbox / Radio -->
+<label class="flex items-center gap-2">
+    <input type="radio" name="guestStatus" id="statusSingle" value="Single">
+    <span>Single Person</span>
+</label>
             
             // Redirect to WhatsApp safely after 1 second
             setTimeout(() => {
