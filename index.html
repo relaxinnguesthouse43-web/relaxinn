@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
     <!-- Meta Pixel Code -->
     <script>
@@ -21,22 +23,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relax Inn Guest House | Premium Stay & Online Booking Lahore</title>
     
-    <!-- Speed Preconnect Protocols -->
+    <!-- Ultra-Fast Speed Preconnect & Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://elfsightcdn.com">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Premium Fonts: Cinzel for Royal Headings & Plus Jakarta Sans for body -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: #070a12;
             color: #e2e8f0;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
         
         .font-heading {
@@ -60,6 +66,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            will-change: transform;
         }
         .whatsapp-float {
             background-color: #25d366;
@@ -73,7 +80,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
@@ -91,13 +98,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
         .insta-float:hover {
             transform: scale(1.1);
         }
 
-        /* Continuous Gallery Loop */
+        /* Continuous Gallery Loop - GPU Accelerated */
         .relax-gallery {
             position: relative;
             overflow: hidden;
@@ -155,8 +162,8 @@
         }
 
         @keyframes relaxGalleryMove {
-            from { transform: translateX(0); }
-            to { transform: translateX(calc(-50% - 10px)); }
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(calc(-50% - 10px), 0, 0); }
         }
         @media (max-width: 768px) {
             .gallery-card { flex: 0 0 260px; width: 260px; height: 340px; }
@@ -174,7 +181,7 @@
             to { opacity: 1; transform: scale(1); }
         }
         
-        /* Prevent Manual Typing in Date Inputs & Show Calendar Cursor */
+        /* Calendar Cursor */
         input[type="date"] {
             cursor: pointer;
         }
@@ -184,10 +191,10 @@
 
     <!-- FLOATING DIRECT BUTTONS -->
     <div class="floating-social-btn">
-        <a href="https://wa.me/923124343223" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <a href="https://wa.me/923124343223" target="_blank" rel="noopener" class="whatsapp-float" title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="insta-float" title="Follow on Instagram">
+        <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" rel="noopener" class="insta-float" title="Follow on Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
     </div>
@@ -207,10 +214,11 @@
                 <a href="#gallery" class="hover:text-amber-500 transition duration-300">Gallery</a>
                 <a href="#facilities" class="hover:text-amber-500 transition duration-300">Amenities</a>
                 <a href="#booking" class="hover:text-amber-500 transition duration-300">Reservation</a>
+                <a href="#reviews" class="hover:text-amber-500 transition duration-300">Reviews</a>
                 <a href="#contact" class="hover:text-amber-500 transition duration-300">Location</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="text-xl text-pink-500 hover:text-pink-400 transition" title="Instagram Profile">
+                <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" rel="noopener" class="text-xl text-pink-500 hover:text-pink-400 transition" title="Instagram Profile">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a href="tel:03124343223" class="hidden sm:inline-flex items-center text-xs font-extrabold text-amber-500 hover:text-amber-400 tracking-wider">
@@ -245,7 +253,7 @@
                 <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-xl transition duration-300 shadow-xl text-xs uppercase tracking-wider">
                     Reserve Online Now
                 </a>
-                <a href="https://wa.me/923124343223" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+                <a href="https://wa.me/923124343223" target="_blank" rel="noopener" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
                     <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
                 </a>
             </div>
@@ -274,7 +282,7 @@
                             <span class="block text-2xl font-extrabold text-amber-500">PKR 6,500</span>
                             <span class="text-xs text-slate-500 font-medium">Per 24 Hour Stay</span>
                         </div>
-                        <a href="#booking" onclick="selectRoom('Executive AC Room (Rs. 6,500)')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
+                        <a href="#booking" onclick="selectRoom('AC Room')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
                     </div>
                 </div>
             </div>
@@ -293,7 +301,7 @@
                             <span class="block text-2xl font-extrabold text-amber-500">PKR 4,500</span>
                             <span class="text-xs text-slate-500 font-medium">Per 24 Hour Stay</span>
                         </div>
-                        <a href="#booking" onclick="selectRoom('Standard Non-AC Room (Rs. 4,500)')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
+                        <a href="#booking" onclick="selectRoom('Without AC Room')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl transition duration-300 text-xs uppercase tracking-wider">Select Room</a>
                     </div>
                 </div>
             </div>
@@ -389,7 +397,7 @@
                     </div>
                 </div>
 
-                <!-- Dates (Calendar Picker Only - No Typing & Prevents Past Dates) -->
+                <!-- Dates (Calendar Picker Only) -->
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Check-in Date</label>
@@ -464,21 +472,83 @@
                     </div>
                 </div>
 
-                <!-- Room Category Select -->
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Room Category</label>
-                    <div class="relative">
-                        <i class="fa-solid fa-bed absolute left-4 top-3.5 text-slate-500"></i>
-                        <select id="roomType" required class="w-full pl-11 pr-4 py-3 border border-slate-800 rounded-xl bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition appearance-none font-semibold text-sm">
-                            <option value="Executive AC Room (Rs. 6,500)">Executive AC Room (PKR 6,500 / 24 Hours)</option>
-                            <option value="Standard Non-AC Room (Rs. 4,500)">Standard Non-AC Room (PKR 4,500 / 24 Hours)</option>
-                        </select>
-                        <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-500 pointer-events-none text-xs"></i>
+                <!-- ROOM SELECTION & DAILY RATE -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Room Option</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-bed absolute left-4 top-3.5 text-slate-500"></i>
+                            <select id="roomType" required onchange="updatePayment()" class="w-full pl-11 pr-4 py-3 border border-slate-800 rounded-xl bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition appearance-none font-semibold text-sm">
+                                <option value="AC Room">AC Room</option>
+                                <option value="Without AC Room">Without AC Room</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-500 pointer-events-none text-xs"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Daily Room Rate</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-tag absolute left-4 top-3.5 text-slate-500"></i>
+                            <input type="text" id="dailyRateDisplay" readonly class="w-full pl-11 pr-4 py-3 border border-slate-800 bg-slate-950/60 text-amber-500 font-bold rounded-xl text-sm cursor-not-allowed" value="Rs. 6,500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUMBER OF DAYS & AUTOMATIC TOTAL PAYMENT CALCULATION -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Number of Days</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-calendar-days absolute left-4 top-3.5 text-slate-500"></i>
+                            <select id="numDays" required onchange="updatePayment()" class="w-full pl-11 pr-4 py-3 border border-slate-800 rounded-xl bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition appearance-none font-semibold text-sm">
+                                <option value="1">1 Day</option>
+                                <option value="2">2 Days</option>
+                                <option value="3">3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5 Days</option>
+                                <option value="6">6 Days</option>
+                                <option value="7">7 Days</option>
+                                <option value="8">8 Days</option>
+                                <option value="9">9 Days</option>
+                                <option value="10">10 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">30 Days</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-4 text-slate-500 pointer-events-none text-xs"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Total Payment</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-calculator absolute left-4 top-3.5 text-slate-500"></i>
+                            <input type="text" id="totalPaymentDisplay" readonly class="w-full pl-11 pr-4 py-3 border border-amber-500/40 bg-amber-500/10 text-amber-400 font-extrabold rounded-xl text-sm cursor-not-allowed" value="Rs. 6,500">
+                        </div>
                     </div>
                 </div>
 
                 <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl transition duration-300 shadow-xl tracking-wider text-xs uppercase">Confirm Room Reservation</button>
             </form>
+        </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS SECTION (WITH WRITE A REVIEW BUTTON) -->
+    <section id="reviews" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-amber-500 uppercase mb-2 block">Customer Feedback</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-white mb-4">Google Reviews</h2>
+                
+                <!-- WRITE A REVIEW BUTTON -->
+                <div class="mt-4">
+                    <a href="https://g.page/r/C17sBm133VUXEAE/review" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-star text-slate-950"></i> Write a Review on Google
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Elfsight Google Reviews Widget (Lazy Loaded) -->
+            <script src="https://elfsightcdn.com/platform.js" async defer></script>
+            <div class="elfsight-app-e3229b7d-46dd-458a-9494-60ad0ce0a747" data-elfsight-app-lazy></div>
         </div>
     </section>
 
@@ -545,7 +615,7 @@
                         <div class="text-amber-500 mt-1"><i class="fa-brands fa-instagram text-lg"></i></div>
                         <div>
                             <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Instagram Page</p>
-                            <p class="text-white font-semibold mt-0.5"><a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="hover:underline text-amber-400">@relaxinnguesthouse</a></p>
+                            <p class="text-white font-semibold mt-0.5"><a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" rel="noopener" class="hover:underline text-amber-400">@relaxinnguesthouse</a></p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
@@ -581,17 +651,68 @@
 
     <footer class="bg-slate-950 text-slate-500 text-center py-8 text-xs border-t border-slate-900">
         <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://wa.me/923124343223" target="_blank" class="text-slate-400 hover:text-emerald-400 text-lg"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" class="text-slate-400 hover:text-pink-400 text-lg"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923124343223" target="_blank" rel="noopener" class="text-slate-400 hover:text-emerald-400 text-lg"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/relaxinnguesthouse" target="_blank" rel="noopener" class="text-slate-400 hover:text-pink-400 text-lg"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p class="mb-2">© 2026 RelaxInn.com. All Rights Reserved.</p>
     </footer>
+
+    <footer class="site-footer">
+        <p>
+            Made by <strong>Mughal Edits</strong> |
+            <a href="https://wa.me/923212816273" target="_blank" rel="noopener">
+                0321-2816273
+            </a>
+        </p>
+    </footer>
+
+    <style>
+    .site-footer {
+        text-align: center;
+        padding: 20px 10px;
+        background: #000;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .site-footer strong {
+        color: #d4af37;
+    }
+
+    .site-footer a {
+        color: #d4af37;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .site-footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
 
     <!-- INTERACTIVE SCRIPT LOGIC -->
     <script>
         let redirectUrl = "";
 
-        // AUTO-SET MINIMUM DATE TO TODAY (Prevents 2020 or past dates selection)
+        // AUTOMATIC PAYMENT CALCULATION LOGIC
+        function updatePayment() {
+            const roomType = document.getElementById('roomType').value;
+            const days = parseInt(document.getElementById('numDays').value) || 1;
+            let dailyRate = 6500;
+
+            if (roomType === 'Without AC Room' || roomType.includes('Without AC') || roomType.includes('Non-AC')) {
+                dailyRate = 4500;
+            } else {
+                dailyRate = 6500;
+            }
+
+            const total = dailyRate * days;
+
+            document.getElementById('dailyRateDisplay').value = `Rs. ${dailyRate.toLocaleString()}`;
+            document.getElementById('totalPaymentDisplay').value = `Rs. ${total.toLocaleString()}`;
+        }
+
+        // AUTO-SET MINIMUM DATE TO TODAY
         document.addEventListener('DOMContentLoaded', () => {
             const today = new Date().toISOString().split('T')[0];
             const checkInInput = document.getElementById('checkIn');
@@ -605,10 +726,18 @@
                     checkOutInput.min = checkInInput.value;
                 }
             });
+
+            updatePayment();
         });
 
         function selectRoom(type) {
-            document.getElementById('roomType').value = type;
+            const roomSelect = document.getElementById('roomType');
+            if (type.includes('Without AC') || type.includes('Non-AC')) {
+                roomSelect.value = 'Without AC Room';
+            } else {
+                roomSelect.value = 'AC Room';
+            }
+            updatePayment();
         }
 
         function handleFormSubmit(event) {
@@ -633,6 +762,9 @@
             const checkOutTime = "12:00 PM";
 
             const roomType = document.getElementById('roomType').value;
+            const days = document.getElementById('numDays').value;
+            const dailyRate = document.getElementById('dailyRateDisplay').value;
+            const totalPayment = document.getElementById('totalPaymentDisplay').value;
 
             // Summary text in modal
             document.getElementById('modalSummary').innerHTML = `
@@ -642,6 +774,9 @@
                 <p><strong>Check-in:</strong> ${checkIn} at ${checkInTime}</p>
                 <p><strong>Check-out:</strong> ${checkOut} at ${checkOutTime}</p>
                 <p><strong>Selected Room:</strong> ${roomType}</p>
+                <p><strong>Number of Days:</strong> ${days} Day(s)</p>
+                <p><strong>Daily Rate:</strong> ${dailyRate}</p>
+                <p><strong>Total Payment:</strong> <span class="text-amber-500 font-bold">${totalPayment}</span></p>
             `;
 
             // Prepare WhatsApp URL
@@ -653,7 +788,10 @@
                            `*Check-in Time:* ${encodeURIComponent(checkInTime)}%0A` +
                            `*Check-out Date:* ${encodeURIComponent(checkOut)}%0A` +
                            `*Check-out Time:* 12:00 PM%0A` +
-                           `*Room Type:* ${encodeURIComponent(roomType)}`;
+                           `*Room Type:* ${encodeURIComponent(roomType)}%0A` +
+                           `*Number of Days:* ${encodeURIComponent(days)}%0A` +
+                           `*Daily Rate:* ${encodeURIComponent(dailyRate)}%0A` +
+                           `*Total Payment:* ${encodeURIComponent(totalPayment)}`;
 
             redirectUrl = `https://wa.me/923124343223?text=${waText}`;
 
@@ -679,35 +817,3 @@
     </script>
 </body>
 </html>
-<footer class="site-footer">
-    <p>
-        Made by <strong>Mughal Edits</strong> |
-        <a href="https://wa.me/923212816273" target="_blank">
-            0321-2816273
-        </a>
-    </p>
-</footer>
-
-<style>
-.site-footer {
-    text-align: center;
-    padding: 20px 10px;
-    background: #000;
-    color: #fff;
-    font-size: 14px;
-}
-
-.site-footer strong {
-    color: #d4af37;
-}
-
-.site-footer a {
-    color: #d4af37;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
-}
-</style>
